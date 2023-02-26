@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+@keyframes an {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: translateY(-150%);}
+    100% {transform: translateX(0);}
+  }
+
+center {
+    animation: an 2.6s forwards;
+}
+
+form input {
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #007FFF;
+}
+
+form button {
+    all: unset;
+    background-color: #007FFF;
+    padding: 10px 20px;
+    border: 2px solid #007FFF;
+    border-radius: 10px;
+    color: #fff;
+}
+
+form button:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    transition: .5 ease;
+}
+
+form button:active {
+    scale: .9;
+}
+
+.canceled {
+    color: brown;
+    text-decoration: line-through;
+}
+
+.fill {
+    position: relative;
+    height: 100%;
+    padding: 10px 5px 15px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 90%;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    background: white;
+    border-radius: 10px;
+    opacity: 0;
+    animation: ani 2.6s forwards;
+}
+
+
+.empty {
+    display: inline-block;
+    height: 100%;
+    padding: 5px 0px 10px 20px;
+    min-height: 160px;
+    max-height: 400px;
+    width: 100%;
+    margin: 10px;
+    border: 3px #F4F5F7 solid;
+    border-radius: 10px;
+    background-color: #F4F5F7;
+    box-shadow: 5px 5px 1px 1px rgb(184, 179, 179);
+    opacity: 0;
+    animation: ani 2.5s forwards;
+    overflow-y: scroll;
+}
+.empty::-webkit-scrollbar {
+    width: 7px;
+    border-radius: 10px;
+}
+.empty::-webkit-scrollbar-track {
+    background-color: rgb(134, 134, 134);
+    border-radius: 10px;
+    width: 7px;
+}
+.empty::-webkit-scrollbar-thumb {
+    height: 1px;
+    width: 5px;
+    background-color: #d6d5d5;
+    border-radius: 10px;
+}
+
+.hold {
+    cursor: pointer;
+    border: solid #ccc 4px;
+}
+
+.hovered {
+    background: gainsboro;
+    border: 2px solid black;
+}
+
+.invisible {
+    display: none;
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+    0% {transform: translateX(-50%);}
+    100% {transform: translateY(0);}
+  }
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 35px 40px;
+    width: 300px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.modal-content button {
+    all: unset;
+    border: none;
+    color: white;
+    background-color: black;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.modal-content button:hover {
+    transition: .5 ease;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.modal-content button:active {
+    scale: 0,9;
+}
+  
+.close-btn {
+    transform: translate(0px , -10px);
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+.close-btn:hover, .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.md-inp {
+    all: unset;
+    margin-top: 10px;
+    background: white;
+    border-radius: 7px;
+    border: 2px solid  #007FFF;
+    padding: 5px 10px;
+}
+
+.edit {
+    margin-left: 10px;
+    background-size: contain;
+    width: 20px;
+    transform: translate(20px , 5px);
+}
+.edit:active {
+    scale: 1.1;
+}
+
